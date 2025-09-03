@@ -1,0 +1,637 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>수원시 K‑BioX 글로벌 서밋 8 | Suwon K‑BioX Global Summit 8</title>
+  <meta name="description" content="수원시 K‑BioX 글로벌 서밋 8 — 글로벌 생명과학·인더스트리·창업·투자 전문가들의 연결과 협력의 장. G‑Quantum Bio Summit 2025와 함께 광교에서 개최됩니다." />
+  <meta property="og:title" content="수원시 K‑BioX 글로벌 서밋 8" />
+  <meta property="og:description" content="수원의 직관적인 아름다움과 함께 하는 글로벌 협력의 장." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0f172a" />
+  <style>
+    :root{
+      --bg:#0f172a;           /* slate-950 */
+      --surface:#0b1222;      /* deep overlay */
+      --glass:rgba(255,255,255,.06);
+      --line:rgba(255,255,255,.12);
+      --text:#e5e7eb;         /* slate-200 */
+      --muted:#cbd5e1;        /* slate-300 */
+      --accent1:#34d399;      /* emerald-400 */
+      --accent2:#38bdf8;      /* sky-400 */
+      --accent3:#6366f1;      /* indigo-500 */
+      --gold:#fbbf24;         /* amber-400 */
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color:var(--text);
+      background: var(--bg);
+      background-image:
+        radial-gradient(1200px 600px at 10% -10%, rgba(16,185,129,.15), transparent),
+        radial-gradient(1000px 500px at 90% 10%, rgba(56,189,248,.15), transparent),
+        radial-gradient(900px 400px at 50% 120%, rgba(99,102,241,.18), transparent);
+    }
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:0 24px}
+    .glass{
+      background:rgba(255,255,255,.05);
+      backdrop-filter: blur(12px);
+      border:1px solid var(--line);
+      border-radius:20px;
+    }
+    .btn{
+      display:inline-flex;align-items:center;gap:8px;
+      border-radius:16px;padding:12px 16px;
+      font-weight:600;cursor:pointer;user-select:none;
+      transition:.2s transform, .2s box-shadow, .2s background;
+      box-shadow: 0 12px 32px -12px rgba(56,189,248,.55);
+    }
+    .btn-gradient{background:linear-gradient(135deg, var(--accent1), var(--accent2), var(--accent3)); color:#0b1222}
+    .btn-outline{border:1px solid var(--line); background:rgba(255,255,255,.04)}
+    .btn-gold{background:linear-gradient(135deg, #fde68a, var(--gold)); color:#0b1222; box-shadow: 0 16px 36px -12px rgba(251,191,36,.7)}
+    .badge{
+      display:inline-flex;align-items:center;gap:6px;
+      border:1px solid rgba(251,191,36,.35);
+      background:rgba(251,191,36,.08);
+      color:#fde68a;
+      border-radius:999px;padding:6px 10px;font-size:12px
+    }
+    header.nav{
+      position:sticky; top:12px; z-index:50;
+    }
+    header.nav .wrap{display:flex;justify-content:space-between;align-items:center;padding:12px 16px}
+    .brand{display:inline-flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.2px}
+    .brand-logo{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:8px;
+      color:#0b1222;background:linear-gradient(135deg, var(--accent1), var(--accent2), var(--accent3)); box-shadow:0 8px 20px -10px rgba(56,189,248,.7)}
+    nav.links a{padding:8px 10px;border-radius:12px;color:#e5e7ebcc}
+    nav.links a:hover{background:rgba(255,255,255,.08);color:white}
+    .progress{height:6px;border-top:1px solid var(--line);border-radius:0 0 16px 16px;overflow:hidden;background:rgba(255,255,255,.04)}
+    .progress .bar{height:100%;width:0;background:linear-gradient(90deg,var(--accent1),var(--accent2),var(--accent3))}
+    /* hero */
+    .hero{position:relative;min-height:92vh;overflow:hidden}
+    .blob{position:absolute;filter: blur(50px);opacity:.3;border-radius:999px;pointer-events:none}
+    .blob.emerald{background:var(--accent1); width:320px;height:320px; left:-90px; top:-90px}
+    .blob.sky{background:var(--accent2); width:260px;height:260px; right:-60px; top:120px}
+    .grid{display:grid; gap:28px}
+    @media (min-width: 900px){ .grid.cols-12{grid-template-columns: repeat(12, minmax(0,1fr))} }
+    .col-7{grid-column: span 12}
+    .col-5{grid-column: span 12}
+    @media (min-width: 900px){ .col-7{grid-column: span 7} .col-5{grid-column: span 5} }
+    h1{font-size: clamp(32px, 5vw, 56px); line-height:1.05; letter-spacing:-.02em; margin:0}
+    .subtitle{margin-top:14px;color:#cbd5e1;max-width:640px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+    .card{position:relative;border:1px solid var(--line);background:rgba(255,255,255,.05);border-radius:22px; padding:22px}
+    .fortress{position:absolute;inset-inline:0;bottom:-8px;opacity:.8}
+    /* section titles */
+    section{padding:80px 0}
+    h2{font-size: clamp(22px, 3.2vw, 32px); margin:0 0 2px 0}
+    p{line-height:1.6}
+    .pill{border:1px solid var(--line);background:rgba(255,255,255,.06);border-radius:14px;padding:8px 10px;font-size:14px}
+    .feature{border:1px solid var(--line);background:rgba(255,255,255,.05);border-radius:18px;padding:18px}
+    .two-col{display:grid; gap:20px}
+    @media (min-width: 860px){ .two-col{grid-template-columns: 1.2fr .8fr} }
+    /* marquee */
+    .marquee-wrap{position:relative;overflow:hidden;margin-top:42px}
+    .marquee-shade{position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg, var(--bg) 0%, rgba(15,23,42,0) 20%, rgba(15,23,42,0) 80%, var(--bg) 100%)}
+    .marquee{display:flex; gap:32px; white-space:nowrap; animation: marquee 22s linear infinite}
+    .marquee span{display:inline-flex;align-items:center;gap:8px;color:#cbd5e1cc}
+    @keyframes marquee{from{transform:translateX(0)} to{transform:translateX(-50%)}}
+    /* schedule tabs */
+    .tabs{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0 18px}
+    .tab{border-radius:16px;padding:10px 14px;border:1px solid var(--line);background:rgba(255,255,255,.05);cursor:pointer}
+    .tab.active{background:linear-gradient(135deg,var(--accent1),var(--accent2),var(--accent3)); color:#0b1222;border-color:transparent}
+    .item{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px;border:1px solid var(--line);background:rgba(255,255,255,.05);border-radius:18px}
+    .item .time{min-width:110px;text-align:center;border:1px solid var(--line);background:rgba(255,255,255,.07);padding:6px 10px;border-radius:12px;color:#e5e7eb}
+    .tag{border:1px solid rgba(251,191,36,.35); background:rgba(251,191,36,.08); color:#fde68a; border-radius:999px; padding:5px 8px; font-size:12px}
+    /* embed card */
+    .embed{position:relative;overflow:hidden}
+    .embed-note{font-size:11px;color:#cbd5e1aa;margin-top:6px}
+    iframe{border:1px solid var(--line); border-radius:12px; width:100%}
+    /* links grid */
+    .grid-links{display:grid; gap:14px}
+    @media (min-width: 900px){ .grid-links{grid-template-columns: repeat(3, minmax(0,1fr))} }
+    .link-tile{display:flex; align-items:center; justify-content:space-between; padding:16px; border:1px solid var(--line); background:rgba(255,255,255,.05); border-radius:18px}
+    .link-tile:hover{background:rgba(255,255,255,.08)}
+    /* faq */
+    .faq{display:grid; gap:14px}
+    @media (min-width: 860px){ .faq{grid-template-columns: 1fr 1fr} }
+    /* footer */
+    footer{border-top:1px solid var(--line); background:rgba(255,255,255,.05)}
+    .footer-wrap{display:flex;flex-direction:column;gap:16px;align-items:flex-start;justify-content:space-between}
+    @media (min-width: 720px){ .footer-wrap{flex-direction:row;align-items:center} }
+    /* floating register */
+    .floating{position:fixed;right:20px;bottom:20px;z-index:40}
+    /* custom cursor */
+    .cursor{
+      position:fixed; left:0; top:0; transform: translate(-50%,-50%);
+      width:24px;height:24px;border-radius:999px; pointer-events:none;
+      border:1px solid rgba(251,191,36,.6); background:rgba(251,191,36,.1);
+      backdrop-filter: blur(3px); opacity:.85; transition: .15s transform, .15s opacity;
+      mix-blend: screen; z-index:200;
+    }
+    .cursor.down{transform: translate(-50%,-50%) scale(1.25); opacity:1}
+    /* magnetic + tilt helpers */
+    .magnetic{display:inline-block}
+    .tilt{transform-style:preserve-3d; transition: transform .12s ease-out}
+    .tilt > .tilt-inner{transform-style:preserve-3d; will-change: transform}
+    /* selection */
+    ::selection{background:rgba(251,191,36,.35); color:#0b1222}
+    .sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+  </style>
+</head>
+<body>
+  <div class="cursor" id="cursor"></div>
+
+  <!-- NAV -->
+  <header class="nav container">
+    <div class="glass wrap">
+      <div class="brand">
+        <span class="brand-logo">K</span>
+        <span class="brand-name">K‑BioX Summit 8 · Suwon</span>
+      </div>
+      <nav class="links">
+        <a href="#about">About</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#register">Register</a>
+        <a href="#links">Links</a>
+        <a class="btn btn-gradient magnetic" href="https://docs.google.com/spreadsheets/d/1dCySMU-scJUSGalHK6U8I-NeMcd9Y0qr-Qe1E57xbs4/edit?gid=0#gid=0" target="_blank" rel="noreferrer">
+          <span>Register</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="#0b1222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </nav>
+    </div>
+    <div class="progress glass"><div class="bar" id="progress"></div></div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="blob emerald"></div>
+    <div class="blob sky"></div>
+    <div class="container grid cols-12" style="padding-top:110px">
+      <div class="col-7">
+        <h1>수원시 <span style="background:linear-gradient(135deg,var(--accent1),var(--accent2),var(--accent3));-webkit-background-clip:text;background-clip:text;color:transparent">K‑BioX 글로벌 서밋 8</span></h1>
+        <p class="subtitle">글로벌 생명과학 · 인더스트리 · 창업 · 투자 전문가들의 연결과 협력의 장.<br>G‑Quantum Bio Summit 2025가 함께 광교에서 열립니다.</p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px">
+          <span class="badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M8 7h8M7 11h10M6 15h12" stroke="#fde68a" stroke-width="2" stroke-linecap="round"/><rect x="3" y="4" width="18" height="16" rx="3" stroke="#fde68a" stroke-width="2"/></svg>
+            2025.09.22(월) – 09.24(수)
+          </span>
+          <span class="badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.686 7-11A7 7 0 0 0 5 10c0 5.314 7 11 7 11Z" stroke="#fde68a" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="#fde68a" stroke-width="2"/></svg>
+            수원컨벤션센터
+          </span>
+          <span class="badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M16 3a4 4 0 1 1-8 0M3 21a7 7 0 0 1 18 0" stroke="#fde68a" stroke-width="2" stroke-linecap="round"/></svg>
+            Policy × Industry × Startup × Investment
+          </span>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-gradient magnetic" href="https://docs.google.com/spreadsheets/d/1dCySMU-scJUSGalHK6U8I-NeMcd9Y0qr-Qe1E57xbs4/edit?gid=0#gid=0" target="_blank" rel="noreferrer">
+            사전등록하기
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="#0b1222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn btn-outline" href="#schedule">프로그램 미리보기
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7V15" stroke="#e5e7eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="col-5">
+        <div class="card tilt" data-tilt>
+          <div class="tilt-inner">
+            <h3 style="margin:0 0 8px 0">행사 개요</h3>
+            <ul style="margin:0;padding-left:18px;color:#cbd5e1">
+              <li style="margin:6px 0">혁신주체 간 교류·협력 → 네트워킹 활성화</li>
+              <li style="margin:6px 0">G‑Bio Week × AI Connect × G‑Fair 동시 개최</li>
+              <li style="margin:6px 0">양자·바이오·AI 융합으로 정책·산업·시민 연결</li>
+            </ul>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">
+              <a class="pill" href="https://invite.kakao.com/tc/Ji2001RWdS" target="_blank" rel="noreferrer">2일차 서밋 8 (왕갈비 네트워크) 카톡방</a>
+              <a class="pill" href="https://invite.kakao.com/tc/jncBaJqeoF" target="_blank" rel="noreferrer">2일차 포스터 발표자 소통방</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Suwon Fortress silhouette -->
+    <div class="fortress">
+      <svg viewBox="0 0 1440 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="100%">
+        <defs>
+          <linearGradient id="suwonGrad" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-color="#34d399"/>
+            <stop offset="50%" stop-color="#38bdf8"/>
+            <stop offset="100%" stop-color="#6366f1"/>
+          </linearGradient>
+        </defs>
+        <path d="M0 180 L200 160 L240 145 L320 150 L380 130 L420 138 L520 128 L560 120 L620 135 L720 110 L780 118 L860 100 L920 112 L980 108 L1060 95 L1140 110 L1200 90 L1260 96 L1320 92 L1440 80 L1440 220 L0 220 Z" fill="url(#suwonGrad)" opacity="0.25"/>
+        <g fill="url(#suwonGrad)" opacity="0.6">
+          <rect x="180" y="120" width="80" height="50" rx="4"/>
+          <rect x="260" y="110" width="18" height="18"/><rect x="282" y="110" width="18" height="18"/><rect x="304" y="110" width="18" height="18"/>
+          <rect x="510" y="100" width="28" height="60"/><rect x="538" y="90" width="22" height="70"/>
+          <rect x="890" y="88" width="70" height="40" rx="3"/><rect x="960" y="98" width="16" height="30"/><rect x="1010" y="84" width="26" height="44"/>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container two-col">
+      <div>
+        <h2>왜 수원인가?</h2>
+        <p style="color:#cbd5e1">광교의 호수와 수원화성의 선(線)을 모티프로, 도시의 직관적인 아름다움을 세련된 인터랙션으로 담았습니다. 정책·산업·시민이 만나는 교차점에서 K‑BioX가 글로벌 협력의 리듬을 만듭니다.</p>
+        <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:14px">
+          <div class="feature"> <strong>융합</strong><div style="color:#cbd5e1;margin-top:4px">양자 × 바이오 × AI의 실증과 전략을 한 자리에.</div></div>
+          <div class="feature"> <strong>연결</strong><div style="color:#cbd5e1;margin-top:4px">병원·대학·기업·정부·투자 생태계가 네트워킹.</div></div>
+          <div class="feature"> <strong>확장</strong><div style="color:#cbd5e1;margin-top:4px">KSEA SV 엑셀러레이팅과 글로벌 협업 트랙 병행.</div></div>
+          <div class="feature"> <strong>실행</strong><div style="color:#cbd5e1;margin-top:4px">정책·규제·법률 세션으로 바로 적용하는 인사이트.</div></div>
+        </div>
+      </div>
+      <div>
+        <div class="glass" style="padding:18px;background:linear-gradient(135deg, rgba(52,211,153,.08), rgba(56,189,248,.08), rgba(99,102,241,.08))">
+          <h3 style="margin:0 0 8px 0">행사 정보</h3>
+          <div style="display:grid;gap:10px;color:#cbd5e1">
+            <div><span class="pill" style="margin-right:8px">일시</span> 2025년 9월 22일(월) – 24일(수)</div>
+            <div><span class="pill" style="margin-right:8px">장소</span> <a href="https://maps.app.goo.gl/EG6i5asSxv2g7qF37" target="_blank" rel="noreferrer" style="text-decoration:underline;text-underline-offset:4px;color:#fff">수원컨벤션센터 (지도)</a></div>
+            <div><span class="pill" style="margin-right:8px">공동 행사</span> G‑Bio Week · AI Connect · G‑Fair</div>
+            <div><span class="pill" style="margin-right:8px">목적</span> 혁신주체 간 교류 협력 및 바이오산업 생태계 조성</div>
+          </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">
+            <a class="pill" href="https://invite.kakao.com/tc/Ji2001RWdS" target="_blank" rel="noreferrer">2일차 서밋 8 카톡방</a>
+            <a class="pill" href="https://invite.kakao.com/tc/jncBaJqeoF" target="_blank" rel="noreferrer">포스터 발표자 소통방</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="marquee-wrap container">
+      <div class="marquee">
+        <span>✦ G‑Quantum Bio Summit 2025</span>
+        <span>✦ Open Innovation Day</span>
+        <span>✦ Suwon City</span>
+        <span>✦ KSEA Silicon Valley</span>
+        <span>✦ K‑BioX</span>
+        <span>✦ Global Hospital Innovation</span>
+        <span>✦ AI × Bio × Quantum</span>
+        <span>✦ G‑Fair</span>
+        <!-- clone for smooth loop -->
+        <span>✦ G‑Quantum Bio Summit 2025</span>
+        <span>✦ Open Innovation Day</span>
+        <span>✦ Suwon City</span>
+        <span>✦ KSEA Silicon Valley</span>
+        <span>✦ K‑BioX</span>
+        <span>✦ Global Hospital Innovation</span>
+        <span>✦ AI × Bio × Quantum</span>
+        <span>✦ G‑Fair</span>
+      </div>
+      <div class="marquee-shade"></div>
+    </div>
+  </section>
+
+  <!-- SCHEDULE -->
+  <section id="schedule">
+    <div class="container">
+      <div style="display:flex;align-items:end;justify-content:space-between;gap:12px;margin-bottom:12px">
+        <h2>행사 일정</h2>
+        <p style="color:#cbd5e1aa;font-size:14px;margin:0">세부 세션은 현장 사정에 따라 조정될 수 있습니다.</p>
+      </div>
+      <div class="tabs" role="tablist">
+        <button class="tab active" data-tab="1" role="tab" aria-selected="true">Day 1 · Beyond Bio <span style="opacity:.7">9/22 (Mon)</span></button>
+        <button class="tab" data-tab="2" role="tab" aria-selected="false">Day 2 · Open Innovation <span style="opacity:.7">9/23 (Tue)</span></button>
+        <button class="tab" data-tab="3" role="tab" aria-selected="false">Day 3 · Connect Life <span style="opacity:.7">9/24 (Wed)</span></button>
+      </div>
+
+      <!-- Day 1 -->
+      <div class="tab-panel" data-panel="1">
+        <div class="grid" style="gap:10px">
+          <div class="item">
+            <div style="display:flex;gap:14px;align-items:center">
+              <span class="time">10:00–12:00</span>
+              <div>
+                <div style="font-weight:600">양자 바이오 국제협력 서밋</div>
+                <div style="font-size:12px;color:#cbd5e1aa">컨벤션홀 1</div>
+              </div>
+            </div>
+            <span class="tag">Beyond Bio</span>
+          </div>
+          <div class="item">
+            <div style="display:flex;gap:14px;align-items:center">
+              <span class="time">14:00–15:00</span>
+              <div>
+                <div style="font-weight:600">공동 개막식 — G‑Bio Week × AI Connect with G‑Fair</div>
+                <div style="font-size:12px;color:#cbd5e1aa">메인 스테이지</div>
+              </div>
+            </div>
+            <span class="tag">Ceremony</span>
+          </div>
+          <div class="item">
+            <div style="display:flex;gap:14px;align-items:center">
+              <span class="time">15:10–17:30</span>
+              <div>
+                <div style="font-weight:600">글로벌 이노베이션 서밋</div>
+                <div style="font-size:12px;color:#cbd5e1aa">메인 스테이지</div>
+              </div>
+            </div>
+            <span class="tag">Summit</span>
+          </div>
+          <div class="item">
+            <div style="display:flex;gap:14px;align-items:center">
+              <span class="time">17:00–18:30</span>
+              <div>
+                <div style="font-weight:600">글로벌 네트워킹</div>
+                <div style="font-size:12px;color:#cbd5e1aa">라운지</div>
+              </div>
+            </div>
+            <span class="tag">Networking</span>
+          </div>
+          <div class="item">
+            <div style="display:flex;gap:14px;align-items:center">
+              <span class="time">종일</span>
+              <div>
+                <div style="font-weight:600">로비 전시 &amp; G‑Fair 수출상담회</div>
+                <div style="font-size:12px;color:#cbd5e1aa">로비</div>
+              </div>
+            </div>
+            <span class="tag">Expo</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 2 -->
+      <div class="tab-panel" data-panel="2" hidden>
+        <div class="grid" style="gap:10px">
+          <div class="item">
+            <div style="display:flex;gap:14px;align-items:center">
+              <span class="time">오전</span>
+              <div>
+                <div style="font-weight:600">융복합 바이오 정책·실증 세션</div>
+                <div style="font-size:12px;color:#cbd5e1aa">컨벤션홀 1</div>
+              </div>
+            </div>
+            <span class="tag">Policy &amp; Pilot</span>
+          </div>
+          <div class="item">
+            <div style="display:flex;gap:14px;align-items:center">
+              <span class="time">오후</span>
+              <div>
+                <div style="font-weight:600">글로벌 연구중심병원 전략·성과 세션</div>
+                <div style="font-size:12px;color:#cbd5e1aa">컨벤션홀 1</div>
+              </div>
+            </div>
+            <span class="tag">Hospital Innovation</span>
+          </div>
+          <div class="item">
+            <div style="display:flex;gap:14px;align-items:center">
+              <span class="time">동시 트랙</span>
+              <div>
+                <div style="font-weight:600">K‑BioX와 함께하는 글로벌 산학 메디컬 협력 프로그램</div>
+                <div style="font-size:12px;color:#cbd5e1aa">분과룸</div>
+              </div>
+            </div>
+            <span class="tag">Collab Program</span>
+          </div>
+          <div class="item">
+            <div style="display:flex;gap:14px;align-items:center">
+              <span class="time">점심</span>
+              <div>
+                <div style="font-weight:600">점심 제공 &amp; 포스터 세션</div>
+                <div style="font-size:12px;color:#cbd5e1aa">로비</div>
+              </div>
+            </div>
+            <span class="tag">Poster</span>
+          </div>
+          <div class="item">
+            <div style="display:flex;gap:14px;align-items:center">
+              <span class="time">15:30–17:30</span>
+              <div>
+                <div style="font-weight:600">KSEA 실리콘밸리 엑셀러레이팅</div>
+                <div style="font-size:12px;color:#cbd5e1aa">5층 다이닝룸</div>
+              </div>
+            </div>
+            <span class="tag">KSEA SV</span>
+          </div>
+          <div class="item">
+            <div style="display:flex;gap:14px;align-items:center">
+              <span class="time">저녁</span>
+              <div>
+                <div style="font-weight:600">수원 왕갈비 네트워크! (조기 마감 예상)</div>
+                <div style="font-size:12px;color:#cbd5e1aa">오프사이트</div>
+              </div>
+            </div>
+            <span class="tag">Dinner</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 3 -->
+      <div class="tab-panel" data-panel="3" hidden>
+        <div class="grid" style="gap:10px">
+          <div class="item">
+            <div style="display:flex;gap:14px;align-items:center">
+              <span class="time">09:30–09:45</span>
+              <div>
+                <div style="font-weight:600">개회사·환영사·축사</div>
+                <div style="font-size:12px;color:#cbd5e1aa">컨벤션홀 3</div>
+              </div>
+            </div>
+            <span class="tag">Opening</span>
+          </div>
+          <div class="item">
+            <div style="display:flex;gap:14px;align-items:center">
+              <span class="time">09:45–10:35</span>
+              <div>
+                <div style="font-weight:600">Session 1: 디지털 헬스케어 플랫폼과 공공의료 혁신 생태계</div>
+                <div style="font-size:12px;color:#cbd5e1aa">컨벤션홀 3</div>
+              </div>
+            </div>
+            <span class="tag">Session</span>
+          </div>
+          <div class="item">
+            <div style="display:flex;gap:14px;align-items:center">
+              <span class="time">10:50–11:50</span>
+              <div>
+                <div style="font-weight:600">Session 2: 병원 기반 디지털 헬스케어 실증</div>
+                <div style="font-size:12px;color:#cbd5e1aa">컨벤션홀 3</div>
+              </div>
+            </div>
+            <span class="tag">Session</span>
+          </div>
+          <div class="item">
+            <div style="display:flex;gap:14px;align-items:center">
+              <span class="time">동시 프로그램</span>
+              <div>
+                <div style="font-weight:600">AI 소통 포럼, G‑바이오 오픈 이노베이션 밋업, 규제과학 포럼, 법률 전략 세미나, 바이오 채용설명회, UN SDGs 청년서밋(해커톤) 시상식</div>
+                <div style="font-size:12px;color:#cbd5e1aa">전관</div>
+              </div>
+            </div>
+            <span class="tag">Parallel</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGISTER -->
+  <section id="register">
+    <div class="container two-col">
+      <div>
+        <h2>사전등록 안내 (필수)</h2>
+        <p style="color:#cbd5e1">초대 기반 등록입니다. 아래 버튼을 눌러 등록 시트를 열고 정보를 정확히 입력해주세요.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+          <a class="btn btn-gradient magnetic" href="https://docs.google.com/spreadsheets/d/1dCySMU-scJUSGalHK6U8I-NeMcd9Y0qr-Qe1E57xbs4/edit?gid=0#gid=0" target="_blank" rel="noreferrer">
+            등록 시트 열기
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="#0b1222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn btn-outline" href="#faq">자주 묻는 질문
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7V15" stroke="#e5e7eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="glass embed">
+        <div style="font-size:12px;display:flex;align-items:center;gap:8px;margin:6px 6px 10px 6px">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M4 12h16M12 4v16" stroke="#e5e7eb" stroke-width="2" stroke-linecap="round"/></svg>
+          미리보기 (읽기 전용)
+        </div>
+        <iframe title="register" src="https://docs.google.com/spreadsheets/d/1dCySMU-scJUSGalHK6U8I-NeMcd9Y0qr-Qe1E57xbs4/edit?gid=0#gid=0" height="360"></iframe>
+        <p class="embed-note">* 임베드가 보이지 않으면 상단 버튼으로 새 창에서 열어주세요.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LINKS -->
+  <section id="links">
+    <div class="container">
+      <h2>바로가기</h2>
+      <div class="grid-links" style="margin-top:16px">
+        <a class="link-tile" href="https://invite.kakao.com/tc/Ji2001RWdS" target="_blank" rel="noreferrer">
+          <span>2일차 서밋 8 (왕갈비 네트워크) 카톡방</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7V15" stroke="#e5e7eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="link-tile" href="https://invite.kakao.com/tc/jncBaJqeoF" target="_blank" rel="noreferrer">
+          <span>2일차 수원시 K‑BioX 서밋 포스터 발표자 소통방</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7V15" stroke="#e5e7eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="link-tile" href="https://maps.app.goo.gl/EG6i5asSxv2g7qF37" target="_blank" rel="noreferrer">
+          <span>수원컨벤션센터 (지도)</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7V15" stroke="#e5e7eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="link-tile" href="https://docs.google.com/spreadsheets/d/1dCySMU-scJUSGalHK6U8I-NeMcd9Y0qr-Qe1E57xbs4/edit?gid=0#gid=0" target="_blank" rel="noreferrer">
+          <span>사전등록 시트</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7V15" stroke="#e5e7eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <h2>FAQ</h2>
+      <div class="faq" style="margin-top:16px">
+        <div class="feature">
+          <div style="font-weight:600">누가 참석할 수 있나요?</div>
+          <p style="color:#cbd5e1">초청 기반으로 운영됩니다. 공동주최/협력기관·연사·포스터 발표자·협력 파트너·투자자 등에게 우선 초대한 뒤, 잔여석은 사전등록 순으로 안내합니다.</p>
+        </div>
+        <div class="feature">
+          <div style="font-weight:600">언어와 통역은 어떻게 진행되나요?</div>
+          <p style="color:#cbd5e1">주요 세션은 한국어 중심으로 진행되며, 일부 세션은 영어 발표가 포함될 수 있습니다. 필요 시 현장 안내를 통해 통역 장비 또는 보조 자료를 제공합니다.</p>
+        </div>
+        <div class="feature">
+          <div style="font-weight:600">식사와 네트워킹은 제공되나요?</div>
+          <p style="color:#cbd5e1">9/22 환영 리셉션, 9/23 점심 제공 및 저녁 네트워킹(왕갈비) 등이 운영됩니다. 일부 세션은 사전 신청이 조기 마감될 수 있습니다.</p>
+        </div>
+        <div class="feature">
+          <div style="font-weight:600">현장 등록이 가능한가요?</div>
+          <p style="color:#cbd5e1">안전한 운영을 위해 사전등록을 원칙으로 합니다. 현장 상황에 따라 별도 안내가 있을 수 있습니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container" style="padding:26px 0">
+      <div class="footer-wrap">
+        <div style="color:#cbd5e1">
+          <div style="color:#fff">Suwon K‑BioX Global Summit 8</div>
+          <div style="font-size:12px">© 2025 공동주최 &amp; K‑BioX. All rights reserved.</div>
+        </div>
+        <div style="display:flex;gap:8px">
+          <a class="pill" href="#top">Back to top</a>
+          <a class="btn btn-gradient" href="https://docs.google.com/spreadsheets/d/1dCySMU-scJUSGalHK6U8I-NeMcd9Y0qr-Qe1E57xbs4/edit?gid=0#gid=0" target="_blank" rel="noreferrer">
+            Register
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="#0b1222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING REGISTER BUTTON -->
+  <a class="btn btn-gold floating magnetic" href="https://docs.google.com/spreadsheets/d/1dCySMU-scJUSGalHK6U8I-NeMcd9Y0qr-Qe1E57xbs4/edit?gid=0#gid=0" target="_blank" rel="noreferrer">
+    사전등록
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="#0b1222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+
+  <script>
+    // Scroll progress
+    const progressBar = document.getElementById('progress');
+    const onScroll = () => {
+      const h = document.documentElement;
+      const scrolled = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+      progressBar.style.width = scrolled + '%';
+    };
+    document.addEventListener('scroll', onScroll);
+    onScroll();
+
+    // Custom cursor
+    const cursor = document.getElementById('cursor');
+    window.addEventListener('mousemove', e => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+    });
+    window.addEventListener('mousedown', () => cursor.classList.add('down'));
+    window.addEventListener('mouseup', () => cursor.classList.remove('down'));
+
+    // Magnetic elements
+    const magnets = document.querySelectorAll('.magnetic');
+    magnets.forEach(el => {
+      const strength = 18;
+      el.addEventListener('mousemove', e => {
+        const rect = el.getBoundingClientRect();
+        const x = e.clientX - (rect.left + rect.width/2);
+        const y = e.clientY - (rect.top + rect.height/2);
+        el.style.transform = 'translate(' + (x/rect.width*strength) + 'px,' + (y/rect.height*strength) + 'px)';
+      });
+      el.addEventListener('mouseleave', () => { el.style.transform = 'translate(0,0)'; });
+    });
+
+    // Tilt cards
+    document.querySelectorAll('[data-tilt]').forEach(card => {
+      const inner = card.querySelector('.tilt-inner');
+      card.addEventListener('mousemove', e => {
+        const r = card.getBoundingClientRect();
+        const px = (e.clientX - r.left) / r.width;
+        const py = (e.clientY - r.top) / r.height;
+        const rx = (py - .5) * -8;
+        const ry = (px - .5) * 12;
+        inner.style.transform = 'rotateX(' + rx + 'deg) rotateY(' + ry + 'deg)';
+      });
+      card.addEventListener('mouseleave', () => { inner.style.transform = 'rotateX(0) rotateY(0)'; });
+    });
+
+    // Tabs
+    const tabs = document.querySelectorAll('.tab');
+    const panels = document.querySelectorAll('.tab-panel');
+    tabs.forEach(t => {
+      t.addEventListener('click', () => {
+        const id = t.getAttribute('data-tab');
+        tabs.forEach(x => { x.classList.toggle('active', x===t); x.setAttribute('aria-selected', x===t ? 'true' : 'false'); });
+        panels.forEach(p => p.hidden = p.getAttribute('data-panel') !== id);
+      });
+    });
+  </script>
+</body>
+</html>
