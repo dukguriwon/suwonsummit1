@@ -1,0 +1,57 @@
+# Site settings
+title: "덕원시 K-bioc 글로벌 서밋"
+description: "덕원시 K-bioc 글로벌 서밋 — 글로벌 생명과학·인더스트리·창업·투자 전문가들의 연결과 협력의 장"
+baseurl: ""
+url: ""
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# GitHub Pages settings
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# SEO settings
+author: "덕원시 K-bioc 글로벌 서밋"
+twitter:
+  username: ""
+  card: "summary_large_image"
+
+# Social media
+social:
+  name: "덕원시 K-bioc 글로벌 서밋"
+  links:
+    - "https://github.com/your-username/suwonsummit1"
+
+# Navigation
+navigation:
+  - title: "About"
+    url: "#about"
+  - title: "Schedule"
+    url: "#schedule"
+  - title: "Register"
+    url: "#register"
+  - title: "Links"
+    url: "#links"
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:categories/:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
