@@ -1,0 +1,59 @@
+name: Auto Commit and Push
+
+on:
+  # Runs on a schedule (every 6 hours)
+  schedule:
+    - cron: '0 */6 * * *'
+  
+  # Allows manual trigger
+  workflow_dispatch:
+    inputs:
+      commit_message:
+        description: 'Custom commit message'
+        required: false
+        default: 'Auto-update: Site maintenance and improvements'
+  
+  # Runs on repository dispatch events
+  repository_dispatch:
+    types: [auto-update]
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  auto-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Configure Git
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if git diff --quiet; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          git add .
+          git commit -m "${{ github.event.inputs.commit_message || 'Auto-update: Site maintenance and improvements' }}"
+          git push origin main
+
+      - name: No changes message
+        if: steps.check_changes.outputs.has_changes == 'false'
+        run: echo "No changes detected, skipping commit and push"

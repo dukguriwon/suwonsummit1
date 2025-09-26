@@ -1,0 +1,27 @@
+{
+  "name": "deokwon-kbioc-summit",
+  "version": "1.0.0",
+  "description": "덕원시 K-bioc 글로벌 서밋 웹사이트",
+  "main": "index.html",
+  "scripts": {
+    "update": "node update-site.js",
+    "build": "echo 'Static site - no build required'",
+    "deploy": "echo 'Deployed via GitHub Actions'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dukguriwon/suwonsummit1.git"
+  },
+  "keywords": [
+    "k-bioc",
+    "summit",
+    "deokwon",
+    "global",
+    "biotech"
+  ],
+  "author": "덕원시 K-bioc 글로벌 서밋",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
